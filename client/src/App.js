@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Uploader from "./uploader";
 
 async function testFetchData() {
   const res = await fetch("/api/v1/tests");
@@ -37,6 +38,8 @@ export class App extends Component {
             ))}
           </ul>
         )}
+        <br />
+        <Uploader />
       </div>
     );
   }
