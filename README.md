@@ -1,24 +1,5 @@
-# README
+# Rails React Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Links
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Create React App + Rails 6.0 + Custom server deployment](https://medium.com/@eth3rnit3/create-react-app-rails-6-0-custom-server-deployment-part-1-development-configuration-92ce11ea9c56)
