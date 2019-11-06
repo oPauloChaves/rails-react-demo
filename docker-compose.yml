@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  db:
+    image: "postgres:12-alpine"
+    ports:
+      - 5432:5432
+    volumes:
+      - rails-pg-data:/var/lib/postgresql/data
+  redis:
+    image: redis:5.0-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - 6379:6379
+    volumes:
+      - rails-redis-data:/data
+
+volumes:
+  rails-pg-data:
+  rails-redis-data:
