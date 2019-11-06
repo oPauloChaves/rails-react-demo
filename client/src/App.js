@@ -9,22 +9,25 @@ export class App extends Component {
   state = {
     users: null,
     error: null,
-    loading: true
+    loading: false
   };
 
-  async componentDidMount() {
+  fetchUsers = async () => {
+    this.setState({ loading: true });
     try {
       const { users } = await testFetchData();
       this.setState({ users, error: null, loading: false });
     } catch (err) {
       this.setState({ users: null, error: err.message, loading: false });
     }
-  }
+  };
 
   render() {
-    console.log(this.state);
     return (
       <div className="App">
+        <button onClick={this.fetchUsers}>Fetch Users</button>
+        <br />
+        <br />
         {this.state.loading && <div>Loading...</div>}
         {this.state.error && <div>Error: {this.state.error}</div>}
         {this.state.users && (
